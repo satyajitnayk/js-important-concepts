@@ -41,5 +41,42 @@
     console.log(numbers); // Output: [1, 2, 3]
     ```
 
+    - Certainly! Let's delve into more detail regarding the last point about reassigning the entire
+      object within the function.
+    - In JavaScript, when you pass an object as an argument to a function, the function parameter
+      receives a copy of the reference to the object. This means that both the original variable and
+      the parameter point to the same object in memory. Any modifications made to the properties of
+      the object through either the original variable or the parameter will affect the underlying object itself.
+
+    - However, reassigning the entire object to a new value within the function will not modify the original
+      object or variable outside the function. This is because the assignment operator (=) in JavaScript works
+      by assigning a new value to the variable or property, rather than modifying the underlying object.
+
+    - Let's illustrate this with an example:
+
+        ```javascript
+        function modifyObject(obj) {
+          obj = { prop: 'new value' }; // Reassigning obj to a new object
+        }
+        
+        let originalObj = { prop: 'old value' };
+        modifyObject(originalObj);
+        console.log(originalObj.prop); // Output: 'old value'
+        ```
+
+    - In this example, the `modifyObject` function receives a copy of the reference to the `originalObj`.
+    - When we reassign `obj` within the function to a new object `{ prop: 'new value' }`, it does not
+      affect the `originalObj` outside the function. The original reference remains intact, and the
+      `console.log` statement outputs `'old value'`.
+
+    - This behavior occurs because the assignment `obj = { prop: 'new value' }` creates a new object
+      in memory and assigns it to the `obj` parameter. It does not modify the original object or its
+      reference. Therefore, the original object remains unchanged.
+
+    - To summarize, when passing objects as arguments in JavaScript functions, modifications to the
+      properties of the object will affect the original object. However, reassigning the entire object
+      within the function will only affect the function parameter, and the original object or variable
+      will remain unaltered.
+
 4. So, in summary, JavaScript passes primitive values by value and objects by reference
    (via a reference to the original object).
