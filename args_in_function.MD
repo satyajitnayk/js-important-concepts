@@ -41,7 +41,7 @@
     console.log(numbers); // Output: [1, 2, 3]
     ```
 
-    - Certainly! Let's delve into more detail regarding the last point about reassigning the entire
+    - Let's delve into more detail regarding the last point about reassigning the entire
       object within the function.
     - In JavaScript, when you pass an object as an argument to a function, the function parameter
       receives a copy of the reference to the object. This means that both the original variable and
