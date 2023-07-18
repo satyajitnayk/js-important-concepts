@@ -1,5 +1,3 @@
-**In JavaScript, arguments in functions are passed by value.**
-
 1. When you pass a primitive value (such as a number, string, or boolean) as an argument to a function,
    a copy of that value is created and assigned to the function parameter. Any modifications made to
    the parameter within the function will not affect the original value that was passed.
