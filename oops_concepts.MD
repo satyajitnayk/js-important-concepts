@@ -439,3 +439,44 @@ those concepts and not to build a real audio streaming API.
 
 - Overall, using interfaces allows for loose coupling between different parts of the code, promotes polymorphism, and
   ensures type safety. It enables you to write more modular, extensible, and maintainable code.
+
+6. **Abstract Class**
+
+- **Need even if we have Interface:** interfaces can also be used to enforce contracts and provide a common interface
+  for classes to implement. While
+  abstract classes can define both property and method implementations, interfaces focus solely on defining the shape of
+  an object or class without providing any default implementation.
+- Abstract class helps us to enforce contracts and can define both property and method implementations .
+- Can not be instantiated.
+
+    ```typescript
+    abstract class Media {
+      constructor(public title: string, public duration: number) {
+      }
+      // method is abstract so child class has to implement the function    
+      abstract play(): void;
+    }
+    
+    class Track extends Media {
+      play(): void {
+        console.log(`Playing track: ${this.title}`);
+      }
+    }
+    
+    class Episode extends Media {
+      constructor(title: string, duration: number, public episodeNumber: number) {
+        super(title, duration);
+      }
+    
+      play(): void {
+        console.log(`Playing episode ${this.episodeNumber}: ${this.title}`);
+      }
+    }
+    
+    const track1 = new Track('Song 1', 180);
+    track1.play();  // Output: Playing track: Song 1
+    
+    const episode1 = new Episode('Episode 1', 2400, 1);
+    episode1.play();  // Output: Playing episode 1: Episode 1
+    
+    ```
