@@ -34,61 +34,58 @@ We will start to apply the OOP concepts, but we'll keep it simple, especially be
 those concepts and not to build a real audio streaming API.
 
 1. **Encapsulation**
-    - All those properties in the Track class are accessible by anyone, let's change that by encapsulating them.
-      Encapsulation
-      is a mechanism to hide information, those information are the classes members, like properties and methods, this
-      is
-      achieved by using the modifiers public, protected, and private.
+- All those properties in the Track class are accessible by anyone, let's change that by encapsulating them.
+  Encapsulation
+  is a mechanism to hide information, those information are the classes members, like properties and methods, this
+  is
+  achieved by using the modifiers public, protected, and private.
 
-        - public members can be accessed anywhere, this is the default modifier.
-          protected members are visible inside of the class they’re declared in and its subclasses.
+- public members can be accessed anywhere, this is the default modifier.
+protected members are visible inside of the class they’re declared in and its subclasses.
+- private members are only visible inside of the class they’re declared in.
+To encapsulate all those properties we follow these steps:
+- Add modifier private :Add _ before the property name, for example, _name
+- Implement the accessors get and set. These methods will be invoked whenever you try to get o set the property
+value.
+- Making all properties private the Track class will look like this:
 
-        - private members are only visible inside of the class they’re declared in.
-          To encapsulate all those properties we follow these steps:
-
-        - Add modifier private :Add _ before the property name, for example, _name
-        - Implement the accessors get and set. These methods will be invoked whenever you try to get o set the property
-          value.
-
-        - Making all properties private the Track class will look like this:
-
-    ```
-    export class Track {
-        private _name: string;
-        private _length: number;
-        private _album: Album;
+  ```
+  export class Track {
+    private _name: string;
+    private _length: number;
+    private _album: Album;
         
-        constructor(name: string, length: number, album: Album) {
-            this._name = name;
-            this._length = length;
-            this._album = album;
-        }
-        
-        get name(): string {
-            return this._name;
-        }
-        
-        set name(name: string) {
-            this._name = name;
-        }
-        
-        get length(): number {
-            return this._length;
-        }
-        
-        set length(length: number) {
-            this._length = length;
-        }
-        
-        get album(): Album {
-            return this._album;
-        }
-        
-        set album(album: Album) {
-            this._album = album;
-        }
+    constructor(name: string, length: number, album: Album) {
+        this._name = name;
+        this._length = length;
+        this._album = album;
     }
-    ```
+        
+    get name(): string {
+        return this._name;
+    }
+        
+    set name(name: string) {
+        this._name = name;
+    }
+        
+    get length(): number {
+        return this._length;
+    }
+        
+    set length(length: number) {
+        this._length = length;
+    }
+        
+    get album(): Album {
+        return this._album;
+    }
+        
+    set album(album: Album) {
+        this._album = album;
+    }
+  }
+  ```
 
 2. **Abstraction**
 
