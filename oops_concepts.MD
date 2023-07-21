@@ -1,7 +1,9 @@
 **Class:** A class is a blueprint or a template that defines the structure and behavior of objects. It defines the properties (attributes) and methods (functions) that objects of that class will have.
 
 **Object:** An object is an instance of a class. It represents a real-world entity with its own unique state and behavior.
-An Album and a Track class, and another file that plays a track.
+
+
+Let's consider An Album and a Track class, and another file that plays a track.
 
 ```typescript
 export class Album {
