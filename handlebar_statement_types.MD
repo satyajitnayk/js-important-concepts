@@ -46,7 +46,7 @@ through each of them with detailed explanations and examples:
    ```
    {{person.name}}
    ```
-
+- The PathExpression nodes are responsible for identifying paths to variables, properties, or helper names within the Handlebars template. In this AST, they are used to identify the block helper name (each), the variable passed to the each block (items), and the reference to the current item within the each block (this).
 5. `StringLiteral`:
    The StringLiteral represents a string value enclosed in double quotes (`"`).
 
