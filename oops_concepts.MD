@@ -23,7 +23,7 @@ export class Track {
 
 // meanwhile in another file ...
 
-function play() {
+play() {
   // Finds the track
   // Play it
 }
@@ -195,7 +195,7 @@ those concepts and not to build a real audio streaming API.
     
         /** getters and setters */
     
-        function play() {
+        play() {
             // Play it
         }
     
@@ -278,7 +278,7 @@ those concepts and not to build a real audio streaming API.
     
         /** everything else remains the same */
     
-        function play() {
+        play() {
           // Check where it left off
           // Play it
         }
