@@ -228,7 +228,30 @@ those concepts and not to build a real audio streaming API.
   another
   class, we have to call super in the constructor, even if there are not any properties to pass to the superclass. Also,
   super can be used to call the parent class methods.
+  ```typescript
+    class Animal {
+      constructor(public name: string) {}
+    
+      makeSound() {
+        console.log("Generic animal sound");
+      }
+    }
+    
+    class Dog extends Animal {
+      constructor(name: string) {
+        super(name); // Call the constructor of the parent class.
+      }
+    
+      makeSound() {
+        super.makeSound(); // Call the makeSound method from the parent class.
+        console.log("Bark!"); // Add additional behavior in the child class.
+      }
+    }
+    
+    const dog = new Dog("Buddy");
+    dog.makeSound();
 
+  ```
 - It's worthy to note that a superclass can be called a parent class, and a subclass can also be called a child class.
 
 - Finally, we create the Podcast and Episode classes, Episode will extend Audio class too:
