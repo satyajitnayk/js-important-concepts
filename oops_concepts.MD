@@ -173,10 +173,7 @@ those concepts and not to build a real audio streaming API.
 
 - That works but it is more difficult to maintain, we have to consider the type in this class behaviors, like in the
   play
-  method, and if we have to support another type of media, we would have to modify everything again, besides that
-  approach
-  goes against two SOLID's principle at least, but this is a topic for another post.
-
+  method, and if we have to support another type of media, we would have to modify everything again.
 - So, how can we solve this problem? Enters the inheritance: A mechanism that allows us to create class hierarchies,
   where
   a subclass can inherit properties and behaviors from its superclass. This is great for reusability.
