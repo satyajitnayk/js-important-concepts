@@ -138,7 +138,7 @@ those concepts and not to build a real audio streaming API.
             this._album = album;
         }
     
-        function play() {
+        play() {
             // Play it
         }
     }
