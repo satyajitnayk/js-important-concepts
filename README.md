@@ -8,4 +8,5 @@ Table of Contents
 * [Types of Handlebar statements](handlebar_statement_types.MD)
 * [OOPs Practical Concepts](oops_concepts.MD)
 * [Decimal Handling](decimal_handling.MD)
+* [Sort Function Logic](sort_function_logic.MD)
   
