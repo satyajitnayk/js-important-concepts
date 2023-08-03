@@ -9,4 +9,5 @@ Table of Contents
 * [OOPs Practical Concepts](oops_concepts.MD)
 * [Decimal Handling](decimal_handling.MD)
 * [Sort Function Logic](sort_function_logic.MD)
+* [Efficient Development](efficient_development.MD)
   
